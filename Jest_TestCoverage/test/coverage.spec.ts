@@ -1,6 +1,7 @@
 import { branch } from "../src/branch";
 import { branch2 } from "../src/branch2";
 import { branch3 } from "../src/branch3";
+import { branch4 } from "../src/branch4";
 import { funcs, funcs2 } from "../src/funcs";
 import { statement } from "../src/statement";
 
@@ -78,9 +79,7 @@ describe("Test Coverage", () => {
   });
 
   describe("Branch Coverage Test 2", () => {
-    // If it is only test case, then
-    // stmt branch funcs lines
-    // 83.33 100    100    80
+    // If it is only test case, then there was an effect of 100% on branch coverage
     test("if x > 5 and  y < 3, then return true", async () => {
       // given
       const x = 6;
@@ -91,8 +90,7 @@ describe("Test Coverage", () => {
       expect(result).toEqual(true);
     });
 
-    // If it is only test case, then
-    // 71.42 50 100 80
+    // If it is only test case, then there was an effect of 50% on branch coverage
     // test("if x > 5 and  y >= 3, then return false", async () => {
     //   // given
     //   const x = 6;
@@ -102,8 +100,6 @@ describe("Test Coverage", () => {
     //   // then
     //   expect(result).toEqual(false);
     // });
-
-    // conclusion: if문으로 분기되는 지점에서 if문 내에 구문이 실행되면 100%, if문 조건에 따라 퍼센트가 정해지는 것 같다.
   });
 
   describe("Branch Coverage Test3", () => {
@@ -131,6 +127,30 @@ describe("Test Coverage", () => {
 
       // then
       expect(result).toEqual(true);
+    });
+  });
+
+  describe("Branch Coverage Test4", () => {
+    // If it is only test case, then there was an effect of 66.6% on branch coverage
+    // test("x > 5", async () => {
+    //   // given
+    //   const x = 6;
+
+    //   // when
+    //   branch4(x);
+
+    //   // then
+    // });
+
+    // If it is only test case, then there was an effect of 0% on branch coverage
+    test("x < 5", async () => {
+      // given
+      const x = 3;
+
+      // when
+      branch4(x);
+
+      // then
     });
   });
 
