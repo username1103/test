@@ -1,0 +1,45 @@
+{
+  "name": "test_coverage",
+  "version": "1.0.0",
+  "description": "테스트커버리지 테스트",
+  "main": "index.js",
+  "author": "myeongil",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^28.1.0",
+    "ts-jest": "^28.0.4",
+    "typescript": "^4.7.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.1",
+    "@types/node": "^17.0.40"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:cov": "jest --coverage"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": ".",
+    "testEnvironment": "node",
+    "testEnvironmentOptions": {
+      "NODE_ENV": "test"
+    },
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "testRegex": ".*\\.spec\\.ts$",
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "./coverage",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/coverage/"
+    ]
+  }
+}
