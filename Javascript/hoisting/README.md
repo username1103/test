@@ -2,20 +2,21 @@
 
 # 변수 호이스팅
 
-각 변수는 3가지 단계를 거쳐 초기화된다.
+javascript의 변수는 3가지 단계를 거쳐 초기화된다.
 
 - 선언: 변수를 Execution Context의 Variable Object에 등록한다.
 
-- 초기화: undefined로 초기화된다.
+- 초기화: 메모리 할당 및 undefined로 초기화된다.
 
-- 할당: 실제 값이 할당된다.
+- 할당: 초기화된 변수에 실제 값을 할당한다.
 
 선언과 초기화는 자바스크립트 엔진이 초기에 파싱되면서 실행되고, 할당은 이후에 코드가 진행되면서 실행된다.
 
 ## var vs const, let
 
-var는 선언과 초기화가 같이 이루어지게 된다.  
-하지만 const, let은 선언은 되지만 초기화가 되지 않기 때문에, 호출시 `ReferenceError: Cannot access 'a' before initialization` 가 발생하게 된다.
+`var`는 선언과 초기화가 같이 이루어지게 된다.  
+하지만 `let`은 선언은 되지만 초기화가 되지 않기 때문에, 변수 선언문에 도달하기 전에 호출시 `ReferenceError: Cannot access 'a' before initialization` 가 발생하게 된다.  
+`const`는 초기화와 할당이 동시에 이루어져야 하는 것 같다. 변수 선언문에 도달하기 전에 호출시 `let`과 같은 에러가 발생한다.
 
 # 함수 호이스팅
 
