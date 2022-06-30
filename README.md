@@ -10,6 +10,7 @@
 ### Javascript
 
 - [호이스팅(hoisting)](https://github.com/username1103/test/tree/master/Javascript/hoisting)
+- [스코프(scope)](https://github.com/username1103/test/tree/master/Javascript/scope)
 
 ### JAVA
 - [순열과 조합](https://github.com/username1103/test/tree/master/Java_Combination_Permutation)
